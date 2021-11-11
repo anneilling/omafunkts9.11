@@ -41,6 +41,8 @@ def is_year_leap(aasta: int):
 
 from math import sqrt
 def is_prime(number):
+    #algarve leidmine
+    #Tagastab True kui on algarve ja False kui on midagi muu
     if number % 2 == 0 and number != 2:
         return False
     if number == 0 or number == 1:
@@ -49,4 +51,34 @@ def is_prime(number):
         if number % n == 0:  
             return False
     return True  
+
+
+
+def square(s:float):
+    if s!=0:
+        tulemus=""
+        p=s*4
+        s=s*s
+        d=sqrt(s*s*s*s)
+        print("P=",p)
+        print("S=", s)
+        print("d=" , d)
+    return tulemus
+
+
+def season(num):
+   if num==12 or 1 <= num <= 2:
+       s="Talv"
+   elif  3 <= num <= 5:
+       s="Kevad"
+   elif 6 <= num <= 8:
+       s="Suvi"
+   elif 9 <= num <= 11:
+       s="Sügis"
+   else:
+       s="Viga!"
+   return s
+
+
+def date(date, month, year):
 
