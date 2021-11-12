@@ -31,7 +31,7 @@ while True:
        print(de_tulemus)
     elif v.upper()=="B":
         money=(float(input("Sisesta raha summa => ")))
-        years=(int(input("years =>")))
+        years=(int(input("years => ")))
         tulemus=bank(money,years)
         print(f"Te teenite {tulemus} {years} aastat")
     elif v.upper()=="D":
