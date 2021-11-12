@@ -30,7 +30,13 @@ while True:
        de_tulemus=xor_uncipher(tulemus, input("Sisesta võti "))
        print(de_tulemus)
     elif v.upper()=="B":
-        money=(float(input("Sisesta raha summa =>")))
+        money=(float(input("Sisesta raha summa => ")))
         years=(int(input("years =>")))
         tulemus=bank(money,years)
-        print(f"Вы заработаете {tulemus} за {years} years")
+        print(f"Te teenite {tulemus} {years} aastat")
+    elif v.upper()=="D":
+         day=(int(input("Sisesta päev => ")))
+         month=(int(input("Sisesta kuu => ")))
+         year=(int(input("Sisesta aasta => ")))
+         tulemus=date(day,month,year)
+         print(tulemus)

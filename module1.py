@@ -112,4 +112,27 @@ def bank(a:float, years:int):
         b=a*k
     return b 
 
+def date(day: int ,month: int , year: int):
+    if year%4 == 0:
+        if month == 2 and 0 < day <= 29:
+            vastus=True
+        elif month in 31 and 0 < day <= 31:
+            vastus=True
+        elif month in 30 and 0 < day <= 30:
+            vastus=True
+        else:
+            vastus=False
+    elif year%4 != 0:
+        if month == 2 and 0 < day < 28:
+            vastus=True
+        elif month in 31 and 0 < day <= 31:
+            vastus=True
+        elif month in 30 and 0 < day <= 30:
+            vastus=True
+        else:
+            vastus=False
+    else:
+        vastus=False
+
+    return vastus
    
