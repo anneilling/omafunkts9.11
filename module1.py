@@ -80,5 +80,36 @@ def season(num):
    return s
 
 
-def date(date, month, year):
+def xor_cipher(string: str , key: str)->str:
+    """Tavaline sõna kodeeritakse
+    ord - десятичное число,которое кодирует букву
+    """
+    result = ''
+    temp = int()
+    for i in range(len(string)):
+        temp = ord(string[i]) #näitab sümboli kood
+        for j in range(len(key)):
+            temp ^=ord(key[j])
+        result +=chr(temp)
+    return result
 
+def xor_uncipher(string:str , key: str) -> str:
+    result =""
+    temp=[]
+    for i in range(len(string)):
+        temp.append(string[i])
+        for j in reversed(range(len(key))):
+            temp[i]= chr(ord(key[j]) ^ ord(temp[i]))
+        result +=temp[i]
+    return result
+
+def bank(a:float, years:int):
+    #otsime, milline on panus
+    #:param float money , years: money
+    #:rtyoe bool: Funktisooni vastus money
+    if a>=0:
+        k=years*1.1
+        b=a*k
+    return b 
+
+   
